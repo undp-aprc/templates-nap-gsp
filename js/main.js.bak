@@ -1,0 +1,26 @@
+// Avoid `console` errors in browsers that lack a console.
+;(function($) {
+    $(document).ready(function() {
+        var viewPortHeight = $(this).height();
+        var scrollStopHeight = viewPortHeight*0.3;
+        var backgroundPosition = $('header').css('background-position');
+
+        $(".container-fluid").scroll(function (event) {
+            var currentScrollHeight = $(this).scrollTop();
+            var scrolledRatio = (currentScrollHeight/viewPortHeight);
+
+            $('header').css('background-position', "center "+(currentScrollHeight*0.15)+"%");
+            if (currentScrollHeight > scrollStopHeight) {
+                $('main').addClass('scroll-fix');
+            } else {
+                $('main').removeClass('scroll-fix');
+            }
+
+            $('#main-menu').css('background-color','rgba(85, 187, 255, '+(0.65+scrolledRatio)+')');
+
+        });
+    });
+})(jQuery);
+
+// Place any jQuery/helper plugins in here.
+
