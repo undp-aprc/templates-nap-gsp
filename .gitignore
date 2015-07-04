@@ -1,0 +1,18 @@
+bower_components
+doc
+fonts
+img
+js
+less
+node_modules
+stock\ images
+404.html
+apple-touch-icon-precomposed.png
+*.md
+*.xml
+*.ico
+Gruntfile.js
+*.txt
+*.json
+.idea
+.DS_Store
